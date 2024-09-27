@@ -1,0 +1,332 @@
+[
+    {
+        "id": "69b062694c3f76a9",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bac0f3e5c7ca67b5",
+        "type": "mqtt in",
+        "z": "69b062694c3f76a9",
+        "name": "",
+        "topic": "fiapers/dados",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "3351ff27b1d0f14b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 460,
+        "wires": [
+            [
+                "2e5f243862b8b372",
+                "87b4a5face6f69b0",
+                "7d35d4318758971d",
+                "01e85ab3a25bca16",
+                "b7ef227e50095d24"
+            ]
+        ]
+    },
+    {
+        "id": "71a8f7c87b2c0d3b",
+        "type": "ui_gauge",
+        "z": "69b062694c3f76a9",
+        "name": "",
+        "group": "b7e75dc9352558eb",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Batimentos",
+        "label": "bpm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 830,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6c35ea3132d8692e",
+        "type": "ui_gauge",
+        "z": "69b062694c3f76a9",
+        "name": "",
+        "group": "b7e75dc9352558eb",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "C",
+        "format": "{{value}}",
+        "min": "25",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 830,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "fbbae88d4539c0b6",
+        "type": "ui_gauge",
+        "z": "69b062694c3f76a9",
+        "name": "",
+        "group": "d79f2b3f1416f782",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Perda de Peso",
+        "label": "-Kg/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 840,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "d0a23a2e3594151e",
+        "type": "ui_gauge",
+        "z": "69b062694c3f76a9",
+        "name": "",
+        "group": "d79f2b3f1416f782",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Nivel de Agua",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 840,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "b7ef227e50095d24",
+        "type": "debug",
+        "z": "69b062694c3f76a9",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "2e5f243862b8b372",
+        "type": "change",
+        "z": "69b062694c3f76a9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.batimento",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 340,
+        "wires": [
+            [
+                "71a8f7c87b2c0d3b"
+            ]
+        ]
+    },
+    {
+        "id": "87b4a5face6f69b0",
+        "type": "change",
+        "z": "69b062694c3f76a9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 420,
+        "wires": [
+            [
+                "6c35ea3132d8692e"
+            ]
+        ]
+    },
+    {
+        "id": "7d35d4318758971d",
+        "type": "change",
+        "z": "69b062694c3f76a9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.perdaPeso",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 500,
+        "wires": [
+            [
+                "fbbae88d4539c0b6"
+            ]
+        ]
+    },
+    {
+        "id": "01e85ab3a25bca16",
+        "type": "change",
+        "z": "69b062694c3f76a9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.nivelAgua",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 580,
+        "wires": [
+            [
+                "d0a23a2e3594151e"
+            ]
+        ]
+    },
+    {
+        "id": "3351ff27b1d0f14b",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt-dashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b7e75dc9352558eb",
+        "type": "ui_group",
+        "name": "",
+        "tab": "bf3ae52a2d9110b9",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d79f2b3f1416f782",
+        "type": "ui_group",
+        "name": "",
+        "tab": "bf3ae52a2d9110b9",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bf3ae52a2d9110b9",
+        "type": "ui_tab",
+        "name": "Sprint 3",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
