@@ -6,6 +6,9 @@ Este é um projeto que permite ao usuário simular os batimentos cardíacos e te
 ## Link do projeto
 https://wokwi.com/projects/409934446038996993
 
+## Link do vídeo explicativo
+https://youtu.be/wZQZZX42_4U
+
 ## Como usar
 1. Inicie a simulaçao no Wokwi
 2. Inicie o broker MQTT
