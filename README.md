@@ -39,6 +39,6 @@ https://youtu.be/wZQZZX42_4U
 ## Autores
 - João Pedro de Souza Lopes (RM 557993)
 - Lorenzzo Vendrusculo Dias (RM 558305)
-- pedro Henrique Angyalossy Corazza Ferronato (RM 554757)
+- Pedro Henrique Angyalossy Corazza Ferronato (RM 554757)
 - Miguel Marques Lourenço de Souza (RM 555426)
 - Gabriel Martins Vannucci (RM 556883)
